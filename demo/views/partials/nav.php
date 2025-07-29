@@ -18,18 +18,18 @@
                             Home
                         </a>
                         <a 
-                            href="/about.php" 
+                            href="/about" 
                             class="
-                                <?= urlIs('/about.php') ? 'bg-gray-900 text-white' : 'text-gray-300' ?> 
+                                <?= urlIs('/about') ? 'bg-gray-900 text-white' : 'text-gray-300' ?> 
                                 hover:bg-gray-700 px-3 py-2 rounded-md text-sm font-medium
                             "     
                         >
                             About
                         </a>
                         <a 
-                            href="/contact.php" 
+                            href="/contact" 
                             class="
-                                <?= urlIs('/contact.php') ? 'bg-gray-900 text-white' : 'text-gray-300' ?> 
+                                <?= urlIs('/contact') ? 'bg-gray-900 text-white' : 'text-gray-300' ?> 
                                 hover:bg-gray-700 px-3 py-2 rounded-md text-sm font-medium
                             "
                         >

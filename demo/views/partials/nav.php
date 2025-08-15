@@ -68,7 +68,25 @@
                                 </button>
                             <?php else : ?>
                                 
-                                <a href="/register" class="text-white">Register</a>
+                                <a
+                                    href="/register"
+                                    class="
+                                        <?= urlIs('/register') ? 'bg-gray-900 text-white' : 'text-gray-300' ?> 
+                                        hover:bg-gray-700 px-3 py-2 rounded-md text-sm font-medium
+                                    "
+                                    aria-current="page">
+                                    Register
+                                </a>
+
+                                <a
+                                    href="/login"
+                                    class="
+                                        <?= urlIs('/login') ? 'bg-gray-900 text-white' : 'text-gray-300' ?> 
+                                        hover:bg-gray-700 px-3 py-2 rounded-md text-sm font-medium
+                                    "
+                                    aria-current="page">
+                                    Login
+                                </a>
                             <?php endif; ?>
                         </div>
 

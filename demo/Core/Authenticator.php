@@ -2,18 +2,17 @@
 
 namespace Core;
 
-class Authenticador
+class Authenticator
 {
     public function attempt($email, $password)
     {
         $user = App::resolve(Database::class)
             ->query('select * from users where email = :email', [
-                'email' => $email
-            ])->find();
+            'email' => $email
+        ])->find();
 
         if ($user) {
             if (password_verify($password, $user['password'])) {
-
                 $this->login([
                     'email' => $email
                 ]);
@@ -41,5 +40,6 @@ class Authenticador
 
         $params = session_get_cookie_params();
         setcookie('PHPSESSID', '', time() - 3600, $params['path'], $params['domain'], $params['secure'], $params['httponly']);
+        Session::destroy();
     }
 }

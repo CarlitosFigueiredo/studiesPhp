@@ -1,0 +1,16 @@
+{
+    "name": "itc_t/studies-php",
+    "authors": [
+        {
+            "name": "Carlos Figueiredo",
+            "email": "carlos.yuri@itcnet.com.br"
+        }
+    ],
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "Core\\": "Core/",
+            "Http\\": "Http/"
+        }
+    }
+}
